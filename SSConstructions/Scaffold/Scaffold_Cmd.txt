@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=localhost;Initial Catalog=Construction;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Scaffold -Context ConstructionDbContext -DataAnnotations -Force

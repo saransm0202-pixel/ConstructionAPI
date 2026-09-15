@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SSConstructions.Repository/SSConstructions.Repository.csproj" />
+  <Project Path="SSConstructions/SSConstructions.csproj" />
+</Solution>
