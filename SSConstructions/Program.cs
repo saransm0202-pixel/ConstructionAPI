@@ -26,6 +26,7 @@ builder.Services.AddScoped<IUsers, Users>();
 builder.Services.AddScoped<ILoginRepo, LoginRepo>();
 builder.Services.AddScoped<IProjectRepo, ProjectRepo>();
 builder.Services.AddScoped<IAppConfigRepo, AppConfigRepo>();
+builder.Services.AddScoped<IPackageRepo, PackageRepo>();
 
 builder.Services.AddCors(options =>
 {

@@ -36,4 +36,6 @@ public partial class Account
 
     [InverseProperty("Account")]
     public virtual ICollection<User> Users { get; set; } = new List<User>();
+    [InverseProperty("Account")]
+    public virtual ICollection<Package> Packages { get; set; } = new List<Package>();
 }
