@@ -23,7 +23,7 @@ namespace SSConstructions.Repository.Utility
                 using (var smtpClient = new SmtpClient("smtp.gmail.com", 587))
                 {
                     smtpClient.EnableSsl = true;
-                    smtpClient.Credentials = new NetworkCredential("saransm0202@gmail.com", "stvc sxxt oxna rwia");
+                    smtpClient.Credentials = new NetworkCredential("inferotech02@gmail.com", "xlyd hgkk kzmx geak"); 
 
                     smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtpClient.EnableSsl = true;
@@ -31,7 +31,7 @@ namespace SSConstructions.Repository.Utility
 
                     //Setting From , To and CC
                     mail.IsBodyHtml = true;
-                    mail.From = new MailAddress("saransm0202@gmail.com", accountName);
+                    mail.From = new MailAddress("inferotech02@gmail.com", accountName);
                     var emailList = toEmail.Split(',', StringSplitOptions.RemoveEmptyEntries);
 
                     foreach (var email in emailList)
