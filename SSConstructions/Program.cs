@@ -83,5 +83,9 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+//app.MapControllers();
+
+//// Angular SPA fallback (VERY IMPORTANT – must be last)
+//app.MapFallbackToFile("index.html");
 
 app.Run();
