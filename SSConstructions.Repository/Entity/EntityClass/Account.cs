@@ -38,4 +38,6 @@ public partial class Account
     public virtual ICollection<User> Users { get; set; } = new List<User>();
     [InverseProperty("Account")]
     public virtual ICollection<Package> Packages { get; set; } = new List<Package>();
+    [InverseProperty("Account")]
+    public virtual ICollection<Extra> Extras { get; set; } = new List<Extra>();
 }

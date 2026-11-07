@@ -27,7 +27,7 @@ public partial class AppConfig
     [Unicode(false)]
     public string? ContactNumber { get; set; }
 
-    [StringLength(25)]
+    [StringLength(225)]
     [Unicode(false)]
     public string? ContactMail { get; set; }
 

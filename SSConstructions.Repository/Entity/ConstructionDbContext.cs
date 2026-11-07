@@ -25,6 +25,7 @@ public partial class ConstructionDbContext : DbContext
     public virtual DbSet<PackageSpec> PackageSpecs { get; set; }
     public virtual DbSet<MasterConstructionType> MasterConstructionTypes { get; set; }
     public virtual DbSet<MasterPackageSpecType> MasterPackageSpecTypes { get; set; }
+    public virtual DbSet<Extra> Extras { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { }
@@ -66,6 +67,14 @@ public partial class ConstructionDbContext : DbContext
             entity.HasOne(d => d.Package).WithMany(p => p.PackageFeatures)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Feature_PackageId");
+        });
+        modelBuilder.Entity<Extra>(entity =>
+        {
+            entity.HasKey(e => e.ExtrasId).HasName("PK__Extras__C3420871FE9D0FB6");
+
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
+
+            entity.HasOne(d => d.Account).WithMany(p => p.Extras).HasConstraintName("FK_Extras_Accounts");
         });
         modelBuilder.Entity<PackageSpec>(entity =>
         {
